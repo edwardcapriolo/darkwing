@@ -55,7 +55,10 @@ Now the portions of our users base with request logging enabled can be controlle
       }
     }
 
-What about xyz alternative
+What about (xyz) alternative
 -------
 
-Poking around I rarely find things that do exactly what darkwing does. feature flag 4j for example offers features and feature groups https://github.com/clun/ff4j/wiki however it's client flipping strategy is hard to configure https://github.com/clun/ff4j/wiki/Flipping-Strategies#clientfilterstrategy 
+Poking around I rarely find things that do exactly what darkwing does the way it does it. Feature flag 4j has a `client flipping strategy` but it is very manual https://github.com/clun/ff4j/wiki/Flipping-Strategies#clientfilterstrategy  and the `pondering strategy` only supports an a and b side
+https://github.com/clun/ff4j/wiki/Flipping-Strategies#darklaunchstrategy
+
+Darkwing is inherently pondering N sided decisions and always flipping based on user.
