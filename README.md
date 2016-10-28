@@ -4,7 +4,7 @@ Dark launch and feature flag system.
 
 Motivation
 -------
-When developing features for a highly utilized system it is not a good idea to release a new feature to all users at once. That could result in poor performance, unexpected bugs, or random experiences for users. Darkwing provides a framework for feature flags to be used across applications to segment users.
+When developing features for a highly utilized system it is not a good plan to release a new feature to all users at once. The new feature could result in poor performance, unexpected bugs, or a poor experience for users. Darkwing provides a framework for feature flags to role out features in a controlable manner.
 
 See https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/ for more information and practical use cases.
 
