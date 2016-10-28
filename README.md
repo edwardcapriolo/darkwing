@@ -1,6 +1,6 @@
 Darkwing
 ======
-Dark launch and feature flag system. 
+Dark launch and feature flag system. See https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/ for more information on dark launching
 
 Motivation
 -------
@@ -41,6 +41,14 @@ With the decider api is great, but you surely do not need it to implement case s
 
 For example imagine we want a to reload our configuration periodically from memcache. Something like this can be easily created:
 
-    private Darkwing darkwing = new Darkwing(new ConfigReloader(new MemcacheConfig(host, port), 
+    Darkwing darkwing = new Darkwing(new ConfigReloader(new MemcacheConfig(host, port), 
             30, TimeUnit.SECONDS));
+    darkwing.init();
 
+Now the portions of our users base with request logging enabled can be controlled via a flag
+
+    public void processRequest(String url, String user){
+      if (groupA.equals(darkwing.decide("should_log", user, "group-b"))){
+        logRequest(user);
+      }
+    }
