@@ -6,6 +6,7 @@ import org.junit.Test;
 import io.teknek.darkwing.legacy.NWayBuilder;
 import io.teknek.darkwing.legacy.NWayDecider;
 
+@SuppressWarnings("deprecation")
 public class NWayDeciderTest {
 
   @Test
