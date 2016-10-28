@@ -1,15 +1,17 @@
 Darkwing
 ======
-Dark launch and feature flag system. See https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/ for more information on dark launching
+Dark launch and feature flag system. 
 
 Motivation
 -------
 When developing features for a highly utilized system it is not a good idea to release a new feature to all users at once. That could result in poor performance, unexpected bugs, or random experiences for users. Darkwing provides a framework for feature flags to be used across applications to segment users.
 
+See https://www.facebook.com/notes/facebook-engineering/hammering-usernames/96390263919/ for more information and practical use cases.
+
 Decider
 =====
 
-A decider segements users into groups. It is important to note that groups are not simply on/off 50%/50% groups "a" and "b". Darkwing allows N groups each each group potentially being a configurable portion of the hash space.
+A `Decider` segements input into groups. It is important to note that groups are not simply on/off 50%/50% groups "a" and "b". Darkwing allows N groups, where each group is a configurable portion of the space.
 
 Here we devide the userspace into three groups of roughly 33% each.
 
