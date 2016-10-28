@@ -54,3 +54,8 @@ Now the portions of our users base with request logging enabled can be controlle
         logRequest(user);
       }
     }
+
+What about xyz alternative
+-------
+
+Poking around I rarely find things that do exactly what darkwing does. feature flag 4j for example offers features and feature groups https://github.com/clun/ff4j/wiki however it's client flipping strategy is hard to configure https://github.com/clun/ff4j/wiki/Flipping-Strategies#clientfilterstrategy 
